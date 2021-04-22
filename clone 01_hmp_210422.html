@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="X-UA-COmpatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8">
+    <!-- 모바일 웹 기준으로 먼저 만들 것. -->
+    <title> 홈플러스온라인, 맛있는 마트 </title>
+    <style>
+        .footer {
+          background-color:#F4F4F4;
+        }
+        .headerNaviBar {
+          float:left;
+          width:100%;
+          height:100%;
+        }
+        #searchBartype {
+          border:1px;
+          border-color:#c2c0c0;
+          border-radius:15px;
+        }
+        .mktSpotBanner {
+          max-width:100%;
+          height:auto;
+        }
+        .mainQuickMenu {
+          float:left;
+          width:100%;
+          height:100%;
+          text-align:center;
+          border: 1px solid transparent;
+        }
+        .prodList {
+          float:left;
+          width:100%;
+          height:100;
+          border: 1px solid transparent;
+        }
+        .titleRecomm {
+          text-align:center;
+        }
+        input[name=tabs] {
+          display:none;
+        }
+
+        label {
+          display: inline-block;
+          color:white;
+          margin: 0 0 1px;
+          padding: 15px 20px;
+          text-align:center;
+          border: 1px solid transparent;
+          border-radius:20px;
+          background-color:#ff6969;
+        }
+
+        label:hover {
+          color:black;
+          cursor:pointer;
+        }
+        input:checked + label {
+          color:black;
+        }
+        #tab1 input:nth-of-type(1):checekd ~ #prodCall01:nth-of-type(1),
+        #tab2 input:nth-of-type(2):checekd ~ #prodCall02:nth-of-type(2),
+        #tab3 input:nth-of-type(3):checekd ~ #prodCall03:nth-of-type(3),
+        #tab4 input:nth-of-type(4):checekd ~ #prodCall04:nth-of-type(4), {
+          background-color:#f25a5a;
+          display:block;
+        }
+        #cartIcon {
+          float:right;
+        }
+
+        .prodCallMenu {
+          border:1px solid transparent;
+          border-radius:40px;
+        }
+
+    </style><!--공통 영역 style 구분. 레이아웃.  -->
+  </head>
+
+  <body>
+    <div class = "mainSearch">
+      <span class = "mainLogo">
+        <button type="button" onclick="location.href='https://front.homeplus.co.kr/'" width="76">
+          <img src="https://mfront.homeplus.co.kr/static/images/logos/homeplus2.png" alt="홈플러스" width="76">
+        </button>
+      </span>
+      <span class = "searchBar">
+        <input id="searchBartype" type="search" placeholder="오늘 뭐 먹지?"/>
+          <button type="submit"> <img src="https://mfront.homeplus.co.kr/static/images/icons/search_main@2x.png" alt="검색">
+          </button>
+      </span>
+      <span class = "myBasket">
+        <button type="button" onclick="location.href='https://mescrow.homeplus.co.kr/home/cart/cartList'"><img src= alt="장바구니" />
+        </button><!-- alt 속성은 이미지 렌더링 실패시 나타나는 텍스트 -->
+      </span><!-- 장바구니 -->
+    </div>
+
+      <br/>
+      <br/>
+
+    <nav class="headerNaviBar"><!-- GNB -->
+      <a href="">홈</a>
+      <a href="">마트전단</a>
+      <a href="">핫새</a>
+      <a href="">싸데이</a>
+      <a href="">베스트</a>
+      <a href="">단골상품</a>
+      <a href="">셀러샵</a>
+      <a href="">혜택존</a>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div class="mainBigBanner"><!-- 메인 롤링 배너-->
+      <a href=""> <img src="https://image.homeplus.kr/ba/db45bae8-2ea3-4912-b1c6-4a066315830c" alt="기획전">
+    </div>
+    <br/>
+    <div class="mktSpotBanner"><!-- MKT 스팟배너-->
+      <a href=""> <img src="https://image.homeplus.kr/ba/bfdee912-fa79-4342-844d-448b10cde14c" alt="마케팅 공지">
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="slotInfo">
+      <span class="deliveryTime"> 금천점 <strong> 지금 주문하면 내일 언젠가 도착 </strong>
+      </span><!-- 배송 점포 및 시각 안내, span 과 iframe 구분 -->
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="mainQuickMenu">
+      <table class="mainQuickMenu">
+        <tr>
+          <td><img src="https://image.homeplus.kr/ba/be5bcf12-0fdf-4213-976c-095cdbab2d9f"/><br> 즉시배송</td>
+          <td><img src="https://image.homeplus.kr/ba/c0d62287-b53f-4b5b-9fb8-d06a0a413acc"/><br> 쿠폰</td>
+          <td><img src="https://image.homeplus.kr/ba/709d488a-edc2-41ed-9658-8b7bdc3e3174"/><br> 1+1</td>
+          <td><img src="https://image.homeplus.kr/ba/5035c7f5-0cd1-4e7c-a4ac-da79ef266be5"/><br> 천원의행복</td>
+        </tr>
+        <tr>
+          <td><img src="https://image.homeplus.kr/ba/9b15cae2-8dd9-4210-8410-fdb634d8ea95"/><br> 증정혜택</td>
+          <td><img src="https://image.homeplus.kr/ba/32068471-2e39-4aac-8266-407044f31c65"/><br> 몽블랑제</td>
+          <td><img src="https://image.homeplus.kr/ba/46281245-2860-4829-a06a-748292952086"/><br> 시그니처</td>
+          <td><img src="https://image.homeplus.kr/ba/82003ea0-ea26-4988-b244-f3b856e4dbbc"/><br> 산지직송</td>
+        </tr>
+      </table>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="prodRecomm">
+      이건뭐님을 위한 추천 상품
+
+    <br/>
+
+      <div class="prodList">
+          <table class="prodList">
+            <tr>
+              <td><img src="https://image.homeplus.kr/it/104956058s0320"/><br>후라보노 <br> 이천원</td>
+              <td><img src="https://image.homeplus.kr/it/056657963s0320"/><br>보노보노 <br> 이찬원</td>
+            </tr>
+          </table>
+        <div class="titleRecomm"> <img src="https://mfront.homeplus.co.kr/static/images/logos/homeplus2.png" alt="Homeplus"/> <img src="https://mfront.homeplus.co.kr/static/images/submain/tit_main@2x.png" alt="의 강력추천"/>
+        </div>
+      </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="prodCallMenu">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1"> 리스트 01 </label>
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2"> 리스트 02 </label>
+      <input id="tab3" type="radio" name="tabs">
+      <label for="tab3"> 리스트 03 </label>
+      <input id="tab4" type="radio" name="tabs">
+      <label for="tab4"> 리스트 04 </label>
+        <div id="prodCall01">
+          <a href="https://mfront.homeplus.co.kr/item?itemNo=059102671&storeType=HYPER"><img class="prodCallMenu" src="https://image.homeplus.kr/it/059102671r0670">
+            <div id="prodListName"><br/> 홈플러스시그니처 맑은샘물 400ML*20
+            </div>
+            <div id="prodListPrice"><br/> <strong />3,980원
+            </div>
+          </a>
+          </br>
+            <div id="cartIcon">
+              <button type="button">
+                <span/> 장바구니 담기
+              </button>
+            </div>
+        </div>
+        <div id="prodCall02">
+          <a href="https://mfront.homeplus.co.kr/item?itemNo=123577645&storeType=HYPER"><img class="prodCallMenu" src="https://image.homeplus.kr/it/123577645r0670">
+            <div id="prodListName"><br/> 베트남 킹 망고 (개)
+            </div>
+            <div id="prodListPrice"><br/> <strong />7,990원
+            </div>
+          </a>
+          </br>
+            <div id="cartIcon">
+              <button type="button">
+                <span/> 장바구니 담기
+              </button>
+            </div>
+        </div>
+        <div id="prodCall03">
+          <a href="https://mfront.homeplus.co.kr/item?itemNo=057584816&storeType=HYPER"><img class="prodCallMenu" src="https://image.homeplus.kr/it/057584816r0670">
+            <div id="prodListName"><br/> THE GREEN 치킨
+            </div>
+            <div id="prodListPrice"><br/> <strong />7,990원
+            </div>
+          </a>
+          </br>
+            <div id="cartIcon">
+              <button type="button">
+                <span/> 장바구니 담기
+              </button>
+            </div>
+        </div>
+        <div id="prodCall04">
+          <a href="https://mfront.homeplus.co.kr/item?itemNo=058032789&storeType=HYPER"><img class="prodCallMenu" src="https://image.homeplus.kr/it/059102671r0670">
+            <div id="prodListName"><br/> 프리미엄 특선 초밥 18
+            </div>
+            <div id="prodListPrice"><br/> <strong />12,990원
+            </div>
+          </a>
+          </br>
+            <div id="cartIcon">
+              <button type="button">
+                <span/> 장바구니 담기
+              </button>
+            </div>
+        </div>
+
+    <br/>
+    <br/>
+
+    <div class = "brandBanner">
+      <a href="https://mfront.homeplus.co.kr/exhibit?promoNo=727"><img src="https://image.homeplus.kr/ba/3b3e050a-4407-4f03-aad2-f6b231de7aa5"></a>
+      <br/>
+      <a href="https://mfront.homeplus.co.kr/exhibit?promoNo=728"><img src="https://image.homeplus.kr/ba/993d0f82-239a-43b0-b192-5f55fc3d9513"></a>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="appLogDown">
+      <span id="logOut">
+        <button type="button"> 로그아웃 </button>
+      </span>
+      <span id="appInstall">
+        <button type="button"> APP 설치 </button>
+      </span>
+    </div>
+
+    <br/>
+    <br/>
+
+    <h3/> 고객센터 이용 안내
+    <h4/> 업무시간 : 09시 ~ 22시
+    <h5/> onlinemart@homeplus.co.kr
+
+    <br/>
+    <br/>
+
+      <div class="mainFooterPolicy">
+          <span id="csCenter">
+            <button type="button" onclick="location.href='https://mfront.homeplus.co.kr/cs'"> 고객센터 </button>
+          </span>
+          <span id="siteRules">
+            <button type="button" onclick="location.href='"> 이용약관 </button>
+          </span>
+          <span id="privacyPolicy">
+            <button type="button" onclick="location.href=''"> 개인정보처리방침 </button>
+          </span>
+          <span id="protectionPolicy">
+            <button type="button" onclick="location.href=''"> 청소년보호정책 </button>
+          </span>
+        </div>
+
+    <br/>
+    <br/>
+
+        <div class="mainFooterNotice">
+          <br/> 사이트 내에는 홈플러스(주)에 입점한 개별판매자가 판매하는 상품이 포함되어 있습니다.
+          <br/> 해당 상품의 경우 홈플러스(주)는 통신판매중개자로서 판매 당사자가 아니며, 상품정보 및 거래 등에 대한 책임을 지지 않습니다.
+        </div>
+    </div>
+
+
+  </body>
+</html>
